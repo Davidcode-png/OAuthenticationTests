@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    'django.contrib.sites',
     "django.contrib.staticfiles",
 
     # Third Party Apps
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'drf_yasg',
+    'storages',
 
 
     # Oauth
@@ -264,6 +266,8 @@ APPEND_SLASH=False
 
 
 AUTH_USER_MODEL = "accounts.NewUser"
+
+SITE_ID = 1
 
 USER_FIELDS = ['email', 'username', 'first_name', 'password']
 
