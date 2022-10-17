@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -265,3 +266,5 @@ APPEND_SLASH=False
 AUTH_USER_MODEL = "accounts.NewUser"
 
 USER_FIELDS = ['email', 'username', 'first_name', 'password']
+
+django_heroku.settings(locals())
